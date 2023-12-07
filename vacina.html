@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site da Saúde</title>
+    <link rel="icon" href="vacina-icon.png" type="image/png">
+  
+    <style>
+     
+        @media only screen and (max-width: 600px) {
+            header ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+
+            header ul li {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            #mensagem-interativa {
+                text-align: center;
+            }
+
+            form {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+
+           
+            #infografico {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #00539f;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #0078d4;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #00539f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        form textarea {
+            resize: vertical;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 30px;
+        }
+        
+        form input[type="submit"] {
+            padding: 8px 20px;
+            background-color: #00539f;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        form input[type="submit"]:hover {
+            background-color: #0078d4;
+        }
+        
+        h2#mensagem-interativa {
+            font-size: 24px;
+            color: #000000;
+            margin-top: 30px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            
+        }
+
+       
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(31, 31, 31);
+            text-align: center;
+        }
+
+        h2 {
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+       
+        a:hover {
+            text-decoration: underline;
+        }
+
+      
+        .back-button {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #158ace;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0d5e9c;
+        }
+        img {
+    max-width: 25%; 
+    height: auto;
+    display: block; 
+    margin: 0 auto 20px; 
+}
+#calendario-link a {
+    color: #0078d4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+#calendario-link a:hover {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+}
+
+
+.classimg {
+    width: 80px;
+    max-width: 80%; 
+    height: auto;
+    display: block; 
+    margin: 0 auto 36px; 
+}
+    </style>
+    <title>Confirmação</title>
+</head>
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Canal da Saúde</h1>
+        <nav>
+            <ul>
+              
+              
+                <li><a href="#vacinas">Vacinas</a></li>
+              
+               
+            </ul>
+        </nav>
+       
+<style>
+
+
+ 
+    @media only screen and (max-width: 600px) {
+        .classimg {
+            cursor: pointer;
+        }
+
+        #modal img {
+            margin-top: 20px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    
+</style>
+
+    </header>
+
+    <main>
+      
+        <section id="resumo-info">
+            <h2>Vacinas</h2>
+            <h3>Resumo de informações</h3>
+            <article>
+               
+                <p>Vacina contra o vírus influenza provoca gripe
+                    <strong>MITO</strong>. A vacina da gripe é composta por um vírus inativado, ou seja, ele está morto. É algo simplesmente impossível, não existe como pegar gripe por meio dessa vacina.
+                    
+                    Vacina tríplice viral pode causar autismo.
+                    <strong>MITO</strong>. Diversos estudos já comprovaram que não existe qualquer tipo de relação entre a vacina e o autismo, durante mais de dez anos nos Estados Unidos,
+                     e confirmou que a vacinação com uma ou duas doses da tríplice viral não estava associada ao risco aumentado de Transtorno do Espectro Autista.
+                    
+                    Vacinas contribuíram para o controle de antigas epidemias.
+                    
+                    <strong>VERDADE</strong>. Hoje em dia, são raros ou até mesmo inexistentes os casos de pessoas com doenças infecciosas como difteria, sarampo, caxumba, coqueluche, poliomielite, rotavírus, rubéola e tétano.
+                    
+                     Isso só foi possível graças ao sucesso das imunizações em massa. 
+                    
+                    Crianças só podem receber uma vacina por vez
+                    
+                    <strong>MITO</strong>. A OMS afirma que não há problemas em administrar diversas vacinas ao mesmo tempo nas crianças. 
+                    A chamada vacinação combinada é indicada para que os pequenos recebam menos injeções e sintam menos desconforto.
+                    
+                    Imunizantes foram essenciais para o controle dos surtos de febre amarela
+                    <strong>VERDADE</strong>. Entre os anos de 2017 e 2019, diversas regiões brasileiras sofreram com surtos de febre amarela.</p>
+            <article>
+
+                Ao nascer <strong>BCG</strong> Dose única (deve ser administrada ainda na maternidade)	
+Hepatite B ,4 doses (0, 2, 4 e 6 meses;
+ou 0, 1, 2 e 6 meses)
+
+2 meses	
+
+Poliomielite (VIP)	3 doses
+(2, 4 e 6 meses)	2 reforços da <strong>VOP</strong> são recomendados
+
+Rotavírus	2 doses
+(2 e 4 meses)  
+
+Tríplice bacteriana (difteria, tétano e coqueluche)	
+
+3 doses
+(2, 4 e 6 meses)	Sim	Sim	Sim
+
+ Pneumocócica 10-valente <strong>(PCV)</strong>	2 doses
+(2 e 4 meses)
+
+
+3 meses 
+
+Meningocócica C	2 doses
+(3 e 5 meses)
+ 
+Meningocócica B	2 doses 
+(3 e 5 meses) (Rede privada)
+
+6 meses	
+Influenza (gripe)
+Covid-19	2 doses	Sim (consultar ciclo vacinal)
+
+9 meses	
+Febre amarela	2 doses
+
+12 meses
+Sarampo, caxumba e rubéola (SCR) 2 doses
+(uma SCR + uma SCRV)
+
+Sarampo, caxumba, rubéola e varicela (SCRV) 2 doses
+(segunda dose de SCRV + primeira de varicela)
+
+Poliomielite (VOP)	2 doses
+(15 meses e 4 anos)
+
+Hepatite A Dose única
+
+4 anos	
+Varicela (catapora) 2 doses, contando a dose anterior da SCRV	
+
+A partir dos 5 anos	
+
+Pneumocócica 23-valente <strong>(PCV)</strong>	Dose única
+
+A partir dos 7 anos	
+Difteria e tétano (dT)	
+3 doses, contando as doses anteriores de pentavalente e DTP A cada 10 anos
+
+Entre 9 e 14 anos (meninas)
+Entre 11 e 14 anos (meninos)	
+Papilomavírus humano<strong> (HPV)</strong> 2 doses
+(intervalo de 6 meses)
+
+11 ou 14 anos	
+Meningocócica <strong>ACWY</strong>
+Dose única
+
+</article>
+<section id="calendario-link">
+
+            
+<h3>Calendários Nacionais</h3>
+<p>
+    <a href="https://www.gov.br/saude/pt-br/vacinacao/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-da-gestante/@@download/file">
+      Calendário Nacional de Vacinação da Gestante - revisão 14.11.2023.pdf
+    </a>
+    <span class="discreet">
+      </span>
+  </p>
+
+  
+<p>
+<a href="https://www.gov.br/saude/pt-br/vacinacao/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-do-adulto-e-do-idoso/@@download/file">
+
+Calendário Nacional de Vacinação do Adulto e Idoso_Vs 20.11.23.pdf
+</a>
+<span class="discreet">
+</span>
+</p>
+
+
+<p>
+<a href="https://www.gov.br/saude/pt-br/vacinacao/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-do-adolescente/@@download/file">
+
+Calendário Nacional de Vacinação do Adolescente - revisão 14.11.2023.docx.pdf
+</a>
+<span class="discreet">
+</span>
+</p>
+
+
+<p>
+<a href="https://www.gov.br/saude/pt-br/vacinacao/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-da-crianca/@@download/file">
+Calendários Nacional de Vacinação da Criança - revisão 14.11.2023.pdf
+</a>
+<span class="discreet">
+</span>
+</p>   
+<p>Para mais informações acessse o Calendário Técnico Nacional de Vacinação, clique <a href="https://www.gov.br/saude/pt-br/vacinacao/calendario-tecnico" target="_blank" rell="external">aqui</a>.</p>
+</article>
+
+
+  
+
+
+        
+ 
+
+   
+            <article>
+               
+              
+
+
+            <p>Voltar para <a href="/" class="back-button">Página Inicial</a>.</p>
+        </div>
+    
+        <script>
+            document.querySelector('.back-button').addEventListener('click', function(event) { 
+            });
+        </script>
+           
+        </section>
+
+
+    </main>
+
+  <script>  
+  function openModal(imgElement) {
+    document.getElementById('modal').style.display = 'block';
+    document.getElementById('modal-img').src = imgElement.src;
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+</script>
+
+<div id="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-img">
+</div>
+
+</body>
+
+</html>
